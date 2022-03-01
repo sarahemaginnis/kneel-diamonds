@@ -9,3 +9,9 @@
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
 
+.settings {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}

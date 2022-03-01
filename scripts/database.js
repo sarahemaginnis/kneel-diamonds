@@ -25,12 +25,18 @@ const database = {
         { id: 4, metal: "Platinum", price: 795.45 },
         { id: 5, metal: "Palladium", price: 1241.0 }
     ],
+    settings: [
+      { id: 1, setting: "Ring" },
+      { id: 2, setting: "Earring" },
+      { id: 3, setting: "Necklace" }  
+    ],
     customOrders: [
         {
             id: 1,
             metalId: 3,
             sizeId: 2,
             styleId: 3,
+            settingId: 1,
             timestamp: 1614659931693
         }
     ],
@@ -49,6 +55,10 @@ export const getSizes = () => {
     return database.sizes.map(size => ({...size}))
 }
 
+export const getSettings = () => {
+    return database.settings.map(setting => ({...setting}))
+}
+
 export const getOrders = () => {
     return database.customOrders.map(order => ({...order}))
 }
@@ -63,6 +73,10 @@ export const setSize = (id) => {
 
 export const setStyle = (id) => {
     database.orderBuilder.styleId = id
+}
+
+export const setSetting = (id) => {
+    database.orderBuilder.settingId = id
 }
 
 export const addCustomOrder = () => {
